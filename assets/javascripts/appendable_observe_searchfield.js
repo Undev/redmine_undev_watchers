@@ -1,5 +1,4 @@
 function appendableObserveSearchfield(fieldId, targetId, url) {
-  alert("apodskopask")
   $('#'+fieldId).each(function() {
     var $this = $(this);
     $this.attr('data-value-was', $this.val());
