@@ -1,0 +1,4 @@
+<%= javascript_tag "appendableObserveSearchfield('user_search', 'users_for_watcher', '#{ escape_javascript url_for(:controller => 'watchers',
+                 :action => 'autocomplete_for_user',
+                 :object_type => watched.class.name.underscore,
+                 :object_id => watched) }')" %>
