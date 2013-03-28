@@ -1,0 +1,12 @@
+#watchers_inputs.new-issue-watchers-inputs {
+  padding-top: 5px;
+}
+
+#watchers_inputs.new-issue-watchers-inputs label {
+  float: none;
+  margin-left: 0;
+  display: block;
+  width: auto;
+  text-align: left;
+  font-weight: normal;
+}

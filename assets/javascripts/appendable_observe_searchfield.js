@@ -1,4 +1,4 @@
-function appendableObserveSearchfield(fieldId, targetId, url) {
+function appendableObserveSearchfield(fieldId, targetId, url, fieldName) {
   $('#'+fieldId).each(function() {
     var $this = $(this);
     $this.attr('data-value-was', $this.val());
@@ -16,6 +16,12 @@ function appendableObserveSearchfield(fieldId, targetId, url) {
               .remove()
               .end()
               .append(data)
+
+            if(fieldName) {
+              $target
+                .find(":checkbox")
+                .attr("name", fieldName)
+            }
 
             $target
               .find(':checked')

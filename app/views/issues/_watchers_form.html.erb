@@ -1,0 +1,16 @@
+<% if @issue.safe_attribute? 'watcher_user_ids' -%>
+      <p id="watchers_form">
+            <label><%= l(:label_issue_watchers) %></label>
+
+            <input type="text" id="watchers_search" autocomplete="off" />
+
+            <%= javascript_tag "appendableObserveSearchfield('watchers_search', 'watchers_inputs', '#{ escape_javascript url_for(
+                  :controller => 'watchers',
+                  :action => 'autocomplete_for_user',
+                  :object_type => "issue") }', 'issue[watcher_user_ids][]')" %>
+
+            <span id="watchers_inputs" class="new-issue-watchers-inputs">
+                  <%= watchers_checkboxes(@issue, @available_watchers) %>
+            </span>
+      </p>
+<% end %>
