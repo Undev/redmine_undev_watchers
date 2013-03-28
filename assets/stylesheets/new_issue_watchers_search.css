@@ -1,5 +1,15 @@
 #watchers_inputs.new-issue-watchers-inputs {
   padding-top: 5px;
+  display: none;
+}
+
+#watchers_inputs.new-issue-watchers-inputs.show {
+  display: block;
+}
+
+#watchers_inputs.new-issue-watchers-inputs div {
+  float: left;
+  margin-right: 20px;
 }
 
 #watchers_inputs.new-issue-watchers-inputs label {
@@ -9,4 +19,13 @@
   width: auto;
   text-align: left;
   font-weight: normal;
+}
+
+#watchers_toggle {
+  text-decoration: none;
+  cursor: pointer;
+}
+
+#watchers_toggle b {
+  border-bottom: 1px dashed;
 }

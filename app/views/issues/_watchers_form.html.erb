@@ -9,8 +9,14 @@
                   :action => 'autocomplete_for_user',
                   :object_type => "issue") }', 'issue[watcher_user_ids][]')" %>
 
+            <br />
+            <a id="watchers_toggle"><b>Project members</b></a>
+
+            <%= javascript_tag "toggleCloudLink('watchers_toggle', 'watchers_inputs', 'show')" %>
+
             <span id="watchers_inputs" class="new-issue-watchers-inputs">
                   <%= watchers_checkboxes(@issue, @available_watchers) %>
             </span>
+            <%= javascript_tag "groupWatchers('watchers_inputs', 4)" %>
       </p>
 <% end %>

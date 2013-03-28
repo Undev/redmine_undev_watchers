@@ -11,7 +11,8 @@ function appendableObserveSearchfield(fieldId, targetId, url, fieldName) {
           type: 'get',
           data: {q: $this.val()},
           success: function(data){
-            $target = $('#'+targetId)
+            var $target = $('#'+targetId)
+              .addClass('show')
               .find('*:not(:has(input:checked), :checked)')
               .remove()
               .end()
@@ -30,6 +31,8 @@ function appendableObserveSearchfield(fieldId, targetId, url, fieldName) {
                   .find( 'label:has([value="' + el.value + '"]:not(:checked))' )
                   .remove()
               });
+
+            groupWatchers(targetId, 4);
           },
           beforeSend: function(){ $this.addClass('ajax-loading'); },
           complete: function(){ $this.removeClass('ajax-loading'); }
@@ -45,4 +48,27 @@ function appendableObserveSearchfield(fieldId, targetId, url, fieldName) {
     var timer = setInterval(check, 300);
     $this.bind('keyup click mousemove', reset);
   });
+}
+
+
+function toggleCloudLink(linkId, blockId, toggleClass) {
+  $('#'+linkId).on('click', function(e) {
+    $('#'+blockId).toggleClass(toggleClass);
+  });
+}
+
+function groupWatchers (containerId, columnsNum) {
+  var
+    $container = $('#'+containerId),
+    $labels = $container.find('label'),
+    itemsPerColumn = Math.ceil( $labels.length / columnsNum ),
+    $column;
+
+  for (var column = 0; column < columnsNum; column++) {
+    $column = $('<div />');
+    for (var item = column * itemsPerColumn; item < ( column + 1 ) * itemsPerColumn && item < $labels.length; item++) {
+      $column.append($labels.eq(item));
+    };
+    $column.appendTo($container);
+  }
 }
