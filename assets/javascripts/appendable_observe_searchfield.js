@@ -9,7 +9,7 @@ function appendableObserveSearchfield(fieldId, targetId, url, fieldName) {
         $.ajax({
           url: url,
           type: 'get',
-          data: {q: $this.val()},
+          data: {q: $this.val().trim()},
           success: function(data){
             var $target = $('#'+targetId)
               .addClass('show')
