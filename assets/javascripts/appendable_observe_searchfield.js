@@ -6,10 +6,12 @@ function appendableObserveSearchfield(fieldId, targetId, url, fieldName) {
       var val = $this.val();
       if ($this.attr('data-value-was') != val){
         $this.attr('data-value-was', val);
+        var q = $this.val().trim();
+        q = q.replace(new RegExp("\\s+","gm"), " ");
         $.ajax({
           url: url,
           type: 'get',
-          data: {q: $this.val().trim()},
+          data: {q: q},
           success: function(data){
             var $target = $('#'+targetId)
               .addClass('show')
