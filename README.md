@@ -2,4 +2,4 @@
 
 ## Installation
 
-* Put plugin's files into the `/plugins` folder of your Redmine instance.
+* Put plugin files into the `/plugins` folder of your Redmine instance.
