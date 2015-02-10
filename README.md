@@ -1,6 +1,6 @@
 # Redmine Undev Watchers Plugin
 
-This plugin makes selection of watchers easier and more convenient.
+This plugin makes selection of issue watchers easier and more convenient.
 
 ## Installation
 
@@ -40,7 +40,11 @@ Now you should be able to see the plugin in **Administration > Plugins**.
 
 ## Usage
 
+The plugin adds the **Project members** link under the **Watchers** field in the issue description.  
+![project members link](undev_watchers_1.PNG)
 
+Click the **Project members** link and select the required check boxes. The selected users will be added as watchers of the issue.
+![select user](undev_watchers_2.PNG)
 
 ## License
 
