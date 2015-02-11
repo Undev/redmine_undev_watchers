@@ -39,8 +39,14 @@ Now you should be able to see the plugin in **Administration > Plugins**.
 The plugin adds the **Project members** link under the **Watchers** field in the issue description.  
 ![project members link](undev_watchers_1.PNG)
 
-Click the **Project members** link and select the required check boxes. The selected users will be added as watchers of the issue.
+Click the **Project members** link and select the required check boxes. The selected users will be added as watchers of the issue.  
 ![select user](undev_watchers_2.PNG)
+
+If you type a part of a user's name, login or email in the **Watchers** field, only members that match the search word will be displayed under the **Project members** link.  
+![search for users](undev_watchers_3.PNG)
+
+The plugin also improves the logic of adding watchers to the existing issues. When you select a user in the **Add watchers** pop-up window and then search for another one, the selected user is no longer hidden in the search results.  
+![search for users](undev_watchers_4.PNG)
 
 ## License
 
