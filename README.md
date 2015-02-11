@@ -30,11 +30,7 @@ This plugin makes selection of issue watchers easier and more convenient.
             sudo apt-get install -y libxml2-dev libxslt-dev libpq-dev
             bundle install
             
-3. This plugin requires a migration. Run the following command to upgrade your database (make a database backup before):  
-
-        bundle exec rake redmine:plugins:migrate RAILS_ENV=production
-
-4. Restart Redmine.
+3. Restart Redmine.
 
 Now you should be able to see the plugin in **Administration > Plugins**.
 
