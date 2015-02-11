@@ -7,7 +7,8 @@
             <%= javascript_tag "appendableObserveSearchfield('watchers_search', 'watchers_inputs', '#{ escape_javascript url_for(
                   :controller => 'watchers',
                   :action => 'autocomplete_for_user',
-                  :object_type => "issue") }', 'issue[watcher_user_ids][]')" %>
+                  :object_type => "issue",
+                  :project_id => @project.id ) }', 'issue[watcher_user_ids][]')" %>
 
             <br />
             <a id="watchers_toggle"><b>Project members</b></a>
