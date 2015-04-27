@@ -1,5 +1,7 @@
 # Redmine Undev Watchers Plugin
 
+[![Code Climate](https://codeclimate.com/github/Undev/redmine_undev_watchers.png)](https://codeclimate.com/github/Undev/redmine_undev_watchers)
+
 This plugin makes selection of issue watchers easier and more convenient.
 
 ## Installation
@@ -47,6 +49,10 @@ If you type a part of a user's name, login or email in the **Watchers** field, o
 
 The plugin also improves the logic of adding watchers to the existing issues. When you select a user in the **Add watchers** pop-up window and then search for another one, the selected user is no longer hidden in the search results.  
 ![search for users](undev_watchers_4.PNG)
+
+## Maintainers
+
+Danil Tashkinov, [github.com/nodecarter](https://github.com/nodecarter)
 
 ## License
 
